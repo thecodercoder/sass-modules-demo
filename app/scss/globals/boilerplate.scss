@@ -1,0 +1,28 @@
+@use '../util';
+@use '../../../lib/library.scss';
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 2rem;
+	background: var(--black);
+	color: var(--white);
+
+	@include util.breakpoint(medium) {
+		padding: 0;
+	}
+}
+
+.rounded-corners {
+	border-radius: library.$border-radius;
+}
